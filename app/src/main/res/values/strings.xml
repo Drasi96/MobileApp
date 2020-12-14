@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">FoodHollow</string>
+    <string name="tv_intro">Welcome to FoodHollow where the food recipes are good and the calories are low </string>
+    <string name="tv_recipes"> Here are some healthy recipes for a healthier lifestyle:</string>
+    <string name="tv_newUser">If you are new to FoodHollow please register here:</string>
+    <string name="tv_alreadyUser">Login here if you already signed up</string>
+    <string name="tv_calorieAim">Calorie aim for the day:</string>
+    <string name="tv_calorieOverall">Overall calorie intake for the day:</string>
+    <string name="tv_calorieLeft">Calories left:</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="log_in">Log In</string>
+    <string-array name="spinner1">
+        <item>
+            Beef
+        </item>
+        <item>
+            Chicken
+        </item>
+        <item>
+            Pork
+        </item>
+    </string-array>
+</resources>

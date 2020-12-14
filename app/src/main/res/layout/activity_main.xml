@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/logIn_button"
+        android:layout_width="85dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="116dp"
+        android:layout_marginRight="116dp"
+        android:onClick="LoginSignUp"
+        android:text="Log In"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/signUp_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="116dp"
+        android:layout_marginRight="116dp"
+        android:layout_marginBottom="27dp"
+        android:onClick="LoginSignUp"
+        android:text="Sign Up"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/tv_intro"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logIn_button" />
+
+    <ImageView
+        android:id="@+id/profilePic"
+        android:layout_width="77dp"
+        android:layout_height="107dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="19dp"
+        android:layout_marginRight="19dp"
+        android:layout_marginBottom="30dp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/tv_intro"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/default_profile_pic" />
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="118dp"
+        android:layout_height="91dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logo" />
+
+    <ImageView
+        android:id="@+id/spongebob"
+        android:layout_width="107dp"
+        android:layout_height="120dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="43dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginRight="15dp"
+        app:layout_constraintEnd_toStartOf="@+id/tv_intro"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logo"
+        app:srcCompat="@drawable/spongebob_fancy_2" />
+
+    <TextView
+        android:id="@+id/tv_intro"
+        android:layout_width="253dp"
+        android:layout_height="138dp"
+        android:layout_marginTop="150dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:fontFamily="sans-serif"
+        android:text="@string/tv_intro"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textSize="22sp"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:visibility="visible" />
+
+    <TextView
+        android:id="@+id/tv_recipes"
+        android:layout_width="283dp"
+        android:layout_height="141dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="70dp"
+        android:layout_marginBottom="69dp"
+        android:fontFamily="sans-serif"
+        android:text="@string/tv_recipes"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textSize="24sp"
+        android:textStyle="italic"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/horizontalScrollView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_intro"
+        tools:visibility="visible" />
+
+    <HorizontalScrollView
+        android:id="@+id/horizontalScrollView"
+        android:layout_width="299dp"
+        android:layout_height="182dp"
+        android:layout_marginStart="56dp"
+        android:layout_marginLeft="56dp"
+        android:layout_marginTop="237dp"
+        android:layout_marginBottom="24dp"
+        android:scrollbarDefaultDelayBeforeFade="20"
+        android:scrollbarSize="4dp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_intro">
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:baselineAligned="false"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_potatoSalad"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Potato Salad"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textSize="18sp"
+                tools:layout_conversion_absoluteHeight="24dp"
+                tools:layout_conversion_absoluteWidth="103dp"
+                tools:layout_editor_absoluteX="196dp"
+                tools:layout_editor_absoluteY="514dp" />
+
+            <ImageButton
+                android:id="@+id/potatoSaladPic"
+                android:layout_width="180dp"
+                android:layout_height="180dp"
+                android:onClick="onlineRecipe"
+                android:scaleType="centerCrop"
+                app:srcCompat="@drawable/gochujangroastsweetpotatoes_6d4bc8e"
+                tools:layout_conversion_absoluteHeight="146dp"
+                tools:layout_conversion_absoluteWidth="180dp"
+                tools:layout_editor_absoluteX="16dp"
+                tools:layout_editor_absoluteY="514dp" />
+
+            <TextView
+                android:id="@+id/tv_porkLentis"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pork Lentis"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textSize="18sp"
+                tools:layout_conversion_absoluteHeight="28dp"
+                tools:layout_conversion_absoluteWidth="108dp"
+                tools:layout_editor_absoluteX="299dp"
+                tools:layout_editor_absoluteY="514dp" />
+
+            <ImageButton
+                android:id="@+id/porklentis"
+                android:layout_width="180dp"
+                android:layout_height="wrap_content"
+                android:onClick="onlineRecipe"
+                android:scaleType="centerCrop"
+                app:srcCompat="@drawable/porklentis"
+                tools:layout_conversion_absoluteHeight="200dp"
+                tools:layout_conversion_absoluteWidth="219dp"
+                tools:layout_editor_absoluteX="407dp"
+                tools:layout_editor_absoluteY="514dp" />
+
+            <TextView
+                android:id="@+id/tv_gulyas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Paprika chicken goulash"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textSize="18sp"
+                tools:layout_conversion_absoluteHeight="24dp"
+                tools:layout_conversion_absoluteWidth="195dp"
+                tools:layout_editor_absoluteX="626dp"
+                tools:layout_editor_absoluteY="514dp" />
+
+            <ImageButton
+                android:id="@+id/gulyas"
+                android:layout_width="180dp"
+                android:layout_height="180dp"
+                android:onClick="onlineRecipe"
+                android:scaleType="centerCrop"
+                app:srcCompat="@drawable/gulyas"
+                tools:layout_conversion_absoluteHeight="180dp"
+                tools:layout_conversion_absoluteWidth="182dp"
+                tools:layout_editor_absoluteX="821dp"
+                tools:layout_editor_absoluteY="514dp" />
+
+        </LinearLayout>
+    </HorizontalScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
